@@ -24,7 +24,7 @@ jobs:
           --health-retries=5
 
     steps:
-      - name: Checkout del código
+      - name: Verificar el código
         uses: actions/checkout@v4
 
       - name: Configurar Node.js
@@ -35,6 +35,10 @@ jobs:
       - name: Instalar dependencias del backend
         working-directory: backend-bar
         run: npm install
+
+      - name: Análisis de código (ESLint)
+        working-directory: backend-bar
+        run: npx eslint .
 
       - name: Esperar MySQL
         run: |
@@ -55,8 +59,3 @@ jobs:
           DB_PASSWORD: root
           DB_NAME: sistema_pos
         run: node src/index.js || echo "Backend inicia correctamente"
-      
-      - name: Análisis de código (ESLint)
-        working-directory: backend-bar
-        run: npx eslint .
-
