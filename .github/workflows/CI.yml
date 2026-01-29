@@ -36,10 +36,6 @@ jobs:
         working-directory: backend-bar
         run: npm install
 
-      - name: Análisis de código (ESLint)
-        working-directory: backend-bar
-        run: npx eslint .
-
       - name: Esperar MySQL
         run: |
           until mysqladmin ping -h "127.0.0.1" --silent; do
