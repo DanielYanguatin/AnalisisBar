@@ -55,3 +55,8 @@ jobs:
           DB_PASSWORD: root
           DB_NAME: sistema_pos
         run: node src/index.js || echo "Backend inicia correctamente"
+      
+      - name: Análisis de código (ESLint)
+        working-directory: backend-bar
+        run: npx eslint .
+
