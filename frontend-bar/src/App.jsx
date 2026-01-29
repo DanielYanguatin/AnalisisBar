@@ -17,7 +17,7 @@ import TablaVentas from "./components/admin/TablaVentas";
 import TablaAlmacenes from "./components/admin/TablaAlmacen";
 import TablaCategorias from "./components/admin/TablaCategorias";
 import TablaPagos from "./components/admin/TablaPagos";
-import CerrarCaja from "./components/shared/cerrarCaja";
+import CerrarCaja from "./components/shared/CerrarCaja";
 
 function App() {
   const [autenticado, setAutenticado] = useState(false);
