@@ -1,0 +1,29 @@
+name: CI Frontend (AnalisisBar)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend-bar/**'
+
+jobs:
+  frontend-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias del frontend
+        working-directory: frontend-bar
+        run: npm install
+
+      - name: Compilar frontend
+        working-directory: frontend-bar
+        run: npm run build
