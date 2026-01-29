@@ -30,7 +30,7 @@ const CajeroHeader = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-[#2196f3]">EFFI</h1>
           <div className="hidden md:block h-10 w-px bg-gray-200"></div>
           <div>
-            <p className="text-sm font-semibold text-[#212121]">CAJERO: <span className="text-[#72cf44]">CAMILA ARTEAGA</span></p>
+            <p className="text-sm font-semibold text-[#212121]">CAJERO: <span className="text-[#72cf44]">CAMILAAA ARTEAGA</span></p>
             <p className="text-sm font-semibold text-[#212121]">CAJA: <span className="text-[#72cf44]">1</span></p>
           </div>
         </div>
